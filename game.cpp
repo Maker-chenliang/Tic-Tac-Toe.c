@@ -1,5 +1,5 @@
 #include"game.h"
-void InitBoard(char board[Row][Col],int row, int col)
+void InitBoard(char board[Row][Col],int row, int col)//初始化棋盘
 {
 	int i=0, j = 0;
 	for (i = 0; i < row; i++)
@@ -11,7 +11,7 @@ void InitBoard(char board[Row][Col],int row, int col)
 	}
 }
 
-void DisplayBoard(char board[Row][Col], int row, int col)
+void DisplayBoard(char board[Row][Col], int row, int col)//展示棋盘
 {
 	int i = 0;
 	for (i = 0; i < row; i++)
@@ -42,7 +42,7 @@ void DisplayBoard(char board[Row][Col], int row, int col)
 	printf("\n");
 }
 
-void playermove(char board[Row][Col], int row, int col)
+void playermove(char board[Row][Col], int row, int col)//玩家下棋
 {
 	printf("玩家下棋\n");
 	printf("请分别输入行和列:");
@@ -59,7 +59,7 @@ void playermove(char board[Row][Col], int row, int col)
 	}
 }
 
-void computermove(char board[Row][Col], int row, int col)
+void computermove(char board[Row][Col], int row, int col)//电脑下棋
 {
 	printf("电脑下棋\n");
 	while (1)
@@ -71,7 +71,7 @@ void computermove(char board[Row][Col], int row, int col)
 		}
 	}
 }
-int Isfull(char board[Row][Col], int row, int col)
+int Isfull(char board[Row][Col], int row, int col)//判断棋盘是否满了
 {
 	for (int i = 0; i < row; i++)
 	{
@@ -84,7 +84,7 @@ int Isfull(char board[Row][Col], int row, int col)
 	}
 	return 1;
 }
-char Iswin(char board[Row][Col], int row, int col)
+char Iswin(char board[Row][Col], int row, int col)//判断获胜
 {
 	//行
 	for (int i = 0; i < row; i++)
